@@ -2,8 +2,15 @@
 <body>
 <p id="intro">
     you are a owner of a new shop on market street
+    you need to buy and sell goods to make a profit
+</p>
+<p id="introend">
+    first go to the buy menu and buy 10 bread then go to frontstore and place them on display
 </p>
 <button id="continueintro" onclick="continuestart()">
+    continue
+</button>
+<button id="continueintroend" onclick="continuestartend()">
     continue
 </button>
 </body>
@@ -16,5 +23,12 @@
 <script>
     function continuestart(){
         document.getElementById("intro").hidden = true;
+        document.getElementById("continueintroend").hidden = true;
+    }
+function continuestart(){
+        document.getElementById("continueintroend").hidden = true;
+        document.getElementById("introend").hidden = true; 
+        document.getElementById("continueintro").hidden = false;
+        document.getElementById("intro").hidden = false;
     }
 </script>
