@@ -14,12 +14,14 @@
     continue
 </button>
 </body>
-<button id="sell">
+<button id="sell" hidden>
     storefront
 </button>
+    <p></p>
 <button id="stats" hidden>
     stats
 </button>
+    <p></p>
 <button id="buy" hidden>
     buy goods
 </button>
@@ -29,6 +31,9 @@
     function continuestartend(){
         document.getElementById("introend").hidden = true;
         document.getElementById("continueintroend").hidden = true;
+        document.getElementById("stats").hidden = false;
+        document.getElementById("sell").hidden = false;
+        document.getElementById("buy").hidden = false;
     }
 function continuestart(){
         document.getElementById("continueintroend").hidden = false;
