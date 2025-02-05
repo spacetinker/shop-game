@@ -32,12 +32,12 @@
     <input type="number" id="buyselect" hidden > put the corrosponding number here</input>
     <input type="number" id="buyamount" hidden > how many? </input>
     <button id="buystart" onclick="buystuff()" hidden > Buy </button>
-    <p id=money> you have 100$ </p>
-    <p id=clothing> you have 0 pieces of clothing </p>
-    <p id=food> you have 0 pieces of food</p>
-    <p id=snacks> you have 0 snacks</p>
-    <p id=drinks> you have 0 drinks </p>
-    <p id=toys> you have 0 toys </p>
+    <p id=money hidden> you have 100$ </p>
+    <p id=clothing hidden> you have 0 pieces of clothing </p>
+    <p id=food hidden> you have 0 pieces of food</p>
+    <p id=snacks hidden> you have 0 snacks</p>
+    <p id=drinks hidden> you have 0 drinks </p>
+    <p id=toys hidden> you have 0 toys </p>
 </html>
 <script>
     function load(){
@@ -91,6 +91,11 @@
         document.getElementById("buyselect").hidden = false;
         document.getElementById("buyamount").hidden = false; 
         document.getElementById("buystart").hidden = false; 
+        document.getElementById("clothing").hidden = false;
+        document.getElementById("food").hidden = false;
+        document.getElementById("snacks").hidden = false; 
+        document.getElementById("drinks").hidden = false; 
+        document.getElementById("toys").hidden = false; 
         load()
         
     }
@@ -100,6 +105,7 @@
         document.getElementById("stats").hidden = false;
         document.getElementById("sell").hidden = false;
         document.getElementById("buy").hidden = false;
+        document.getElementById("money").hidden = false; 
     }
 function continuestart(){
         document.getElementById("continueintroend").hidden = false;
