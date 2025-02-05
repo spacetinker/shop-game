@@ -32,8 +32,22 @@
     <input type="number" id="buyselect" hidden > put the corrosponding number here</input>
     <input type="number" id="buyamount" hidden > how many? </input>
     <button id="buystart" onclick="buystuff()" hidden > Buy </button>
+    <p id=money> you have 100$ </p>
+    <p id=clothing> you have 0 pieces of clothing </p>
+    <p id=food> you have 0 pieces of food</p>
+    <p id=snacks> you have 0 snacks</p>
+    <p id=drinks> you have 0 drinks </p>
+    <p id=toys> you have 0 toys </p>
 </html>
 <script>
+    function load(){
+        document.getElementById("money").innerHTML = "you have " + money + "$";
+        document.getElementById("clothing").innerHTML = "you have " + clo + "pieces of clothing";
+        document.getElementById("money").innerHTML = "you have " + foo + " pieces of food";
+        document.getElementById("snacks").innerHTML = "you have " + sna + " snacks";
+        document.getElementById("drinks").innerHTML = "you have " + dri + " drinks";
+        document.getElementById("toys").innerHTML = "you have " + toy + " toys";
+    }
     var clo = 0;
     var foo = 0;
     var sna = 0;
@@ -56,24 +70,28 @@
         if (buyselect == 5)
             toy = toy + buyamount
             money = money - (buyamount *  8) 
+        load()
     }
     function statsarea(){
         document.getElementById("buyoption").hidden = true;
         document.getElementById("buyselect").hidden = true; 
         document.getElementById("buyamount").hidden = true; 
         document.getElementById("buystart").hidden = true; 
+        load()
     }
     function frontarea(){
         document.getElementById("buyoption").hidden = true;
         document.getElementById("buyselect").hidden = true; 
         document.getElementById("buyamount").hidden = true;
         document.getElementById("buystart").hidden = true; 
+        load()
     }
     function buyarea(){
         document.getElementById("buyoption").hidden = false;
         document.getElementById("buyselect").hidden = false;
         document.getElementById("buyamount").hidden = false; 
         document.getElementById("buystart").hidden = false; 
+        load()
         
     }
     function continuestartend(){
