@@ -42,13 +42,18 @@
     which do you want to put in front?
 </p>
 <input type="numbers" id="frontselector" > 
-    which do you want to put in front 
+    which do you want to put in front? just put the number (1 is clothing 2 is food 3 is snacks 4 is drinks 5 is toys) 
 </input>
+<button id="frontplace" onclick=placefront()>put it in front</button>
 <p id=spacefront >
     you still have 200 space avaliable
 </p>
 </html>
 <script>
+    function placefront(){
+        
+        load()
+    }
     function load(){
         document.getElementById("money").innerHTML = "you have " + money + "$";
         document.getElementById("clothing").innerHTML = "you have " + clo + "pieces of clothing";
@@ -56,28 +61,35 @@
         document.getElementById("snacks").innerHTML = "you have " + sna + " snacks";
         document.getElementById("drinks").innerHTML = "you have " + dri + " drinks";
         document.getElementById("toys").innerHTML = "you have " + toy + " toys";
+        document.getElementById("frontplace").innerHTML = "you still have " + frontspace + " space avaliable";
     }
     var clo = 0;
     var foo = 0;
     var sna = 0;
     var dri = 0;
     var toy = 0;
+    var frontclo = 0;
+    var frontfoo = 0;
+    var frontsna = 0;
+    var frontdri = 0;
+    var fronttoy = 0;
     var money = 100;
+    var frontspace = 200;
     function buystuff(){
         if (buyselect == 1)
-            clo = clo + buyamount
+            clo = number(clo) + number(buyamount)
             money = money - (buyamount *  15) 
         if (buyselect == 2)
-            foo = foo + buyamount
+            foo = number(foo) + number(buyamount)
             money = money - (buyamount *  10) 
         if (buyselect == 3)
-            sna = sna + buyamount
+            sna = number(sna) + number(buyamount)
             money = money - (buyamount *  7) 
         if (buyselect == 4)
-            dri = dri + buyamount
+            dri = number(dri) + number(buyamount)
             money = money - (buyamount *  6) 
         if (buyselect == 5)
-            toy = toy + buyamount
+            toy = number(toy) + number(buyamount)
             money = money - (buyamount *  8) 
         load()
     }
