@@ -38,7 +38,7 @@
     <p id=snacks hidden> you have 0 snacks</p>
     <p id=drinks hidden> you have 0 drinks </p>
     <p id=toys hidden> you have 0 toys </p>
-<p id=fronttalk >
+<p id="fronttalk" >
     which do you want to put in front?
 </p>
 <input type="numbers" id="frontselector" > 
@@ -48,15 +48,24 @@
     how many?
 </input>
 <button id="frontplace" onclick=placefront()>put it in front</button>
-<p id=spacefront >
+<p id="spacefront" >
     you still have 200 space avaliable
+</p>
+<p id="fronterror" hidden>
+    sorry you either don't have enough of that product or there is not enough space
 </p>
 </html>
 <script>
     function placefront(){
-        if ("frontselector" == 1) and ("frontamount" <= clo){
-            
+    document.getElementById("fronterror").hidden = true;
+        if ("frontselector" == 1){
+            if (frontamount <= clo) and (frontspace >=frontamount){
+            frontclo = frontclo + frontamount
+            frontspace = frontspace - frontamount
+        }else{
+            document.getElementById("fronterror").hidden = false;
         }
+    }
         load()
     }
     function load(){
