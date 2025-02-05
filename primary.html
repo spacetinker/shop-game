@@ -31,10 +31,12 @@
 <p id="buyoption" hidden > you can buy clothing(1) food(2) snacks(3) drinks(4) or toys(5) </p>
     <input type="number" id="buyselect" hidden > put the corrosponding number here</input>
     <input type="number" id="buyamount" hidden > how many? </input>
-    <button id="buystart" onclick="buystuff" hidden > Buy
+    <button id="buystart" onclick="buystuff()" hidden > Buy </button>
 </html>
 <script>
-    
+    function buystuff(){
+        
+    }
     function statsarea(){
         document.getElementById("buyoption").hidden = true;
         document.getElementById("buyselect").hidden = true; 
