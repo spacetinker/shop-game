@@ -54,6 +54,7 @@
 <p id="fronterror" hidden>
     sorry you either don't have enough of that product or there is not enough space
 </p>
+    
 </html>
 <script>
     function placefront(){
@@ -107,7 +108,7 @@
         document.getElementById("snacks").innerHTML = "you have " + sna + " snacks";
         document.getElementById("drinks").innerHTML = "you have " + dri + " drinks";
         document.getElementById("toys").innerHTML = "you have " + toy + " toys";
-        document.getElementById("frontplace").innerHTML = "you still have " + frontspace + " space avaliable";
+        document.getElementById("spacefront").innerHTML = "you still have " + frontspace + " space avaliable";
     }
     var clo = 0;
     var foo = 0;
@@ -137,23 +138,6 @@
         if (buyselect == 5)
             toy = number(toy) + number(buyamount)
             money = money - (buyamount *  8) 
-        load()
-    }
-    function statsarea(){
-        document.getElementById("buyoption").hidden = true;
-        document.getElementById("buyselect").hidden = true; 
-        document.getElementById("buyamount").hidden = true; 
-        document.getElementById("buystart").hidden = true; 
-        document.getElementById("clothing").hidden = true;
-        document.getElementById("food").hidden = true;
-        document.getElementById("snacks").hidden = true; 
-        document.getElementById("drinks").hidden = true; 
-        document.getElementById("toys").hidden = true; 
-        document.getElementById("spacefront").hidden = true;
-        document.getElementById("frontplace").hidden = true;
-        document.getElementById("frontamount").hidden = true; 
-        document.getElementById("frontselector").hidden = true;  
-        document.getElementById("fronttalk").hidden = true;  
         load()
     }
     function frontarea(){
