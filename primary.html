@@ -30,20 +30,29 @@
 </button>
 <p id="buyoption" hidden > you can buy clothing(1) food(2) snacks(3) drinks(4) or toys(5) </p>
     <input type="number" id="buyselect" hidden > put the corrosponding number here</input>
+    <input type="number" id="buyamount" hidden > how many? </input>
+    <button id="buystart" onclick="buystuff" hidden > Buy
 </html>
-<p id=></p>
 <script>
+    
     function statsarea(){
         document.getElementById("buyoption").hidden = true;
         document.getElementById("buyselect").hidden = true; 
+        document.getElementById("buyamount").hidden = true; 
+        document.getElementById("buystart").hidden = true; 
     }
     function frontarea(){
         document.getElementById("buyoption").hidden = true;
-        document.getElementById("buyselect").hidden = true;  
+        document.getElementById("buyselect").hidden = true; 
+        document.getElementById("buyamount").hidden = true;
+        document.getElementById("buystart").hidden = true; 
     }
     function buyarea(){
         document.getElementById("buyoption").hidden = false;
         document.getElementById("buyselect").hidden = false;
+        document.getElementById("buyamount").hidden = false; 
+        document.getElementById("buystart").hidden = false; 
+        
     }
     function continuestartend(){
         document.getElementById("introend").hidden = true;
