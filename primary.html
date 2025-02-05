@@ -38,17 +38,17 @@
     <p id=snacks hidden> you have 0 snacks</p>
     <p id=drinks hidden> you have 0 drinks </p>
     <p id=toys hidden> you have 0 toys </p>
-<p id="fronttalk" >
+<p id="fronttalk" hidden>
     which do you want to put in front?
 </p>
-<input type="numbers" id="frontselector" > 
+<input type="numbers" id="frontselector" hidden> 
     just put the number (1 is clothing 2 is food 3 is snacks 4 is drinks 5 is toys) 
 </input>
-<input type="numbers"id="frontamount">
+<input type="numbers"id="frontamount" hidden>
     how many?
 </input>
-<button id="frontplace" onclick=placefront()>put it in front</button>
-<p id="spacefront" >
+<button id="frontplace" onclick=placefront() hidden>put it in front</button>
+<p id="spacefront" hidden >
     you still have 200 space avaliable
 </p>
 <p id="fronterror" hidden>
@@ -62,10 +62,42 @@
             if (frontamount <= clo) and (frontspace >=frontamount){
             frontclo = frontclo + frontamount
             frontspace = frontspace - frontamount
+            clo = clo - frontamount
         }else{
             document.getElementById("fronterror").hidden = false;
         }
-    }
+        if ("frontselector" == 2){
+            if (frontamount <= foo) and (frontspace >=frontamount){
+            frontfoo = frontfoo + frontamount
+            frontspace = frontspace - frontamount
+            foo = foo - frontamount
+        }else{
+            document.getElementById("fronterror").hidden = false;
+        }
+        if ("frontselector" == 3){
+            if (frontamount <= sna) and (frontspace >=frontamount){
+            frontsna = frontsna + frontamount
+            frontspace = frontspace - frontamount
+            sna = sna - frontamount
+        }else{
+            document.getElementById("fronterror").hidden = false;
+        }
+        if ("frontselector" == 2){
+            if (frontamount <= dri) and (frontspace >=frontamount){
+            frontdri = frontdri + frontamount
+            frontspace = frontspace - frontamount
+            dri = dri - frontamount
+        }else{
+            document.getElementById("fronterror").hidden = false;
+        }
+        if ("frontselector" == 3){
+            if (frontamount <= toy) and (frontspace >=frontamount){
+            fronttoy = fronttoy + frontamount
+            frontspace = frontspace - frontamount
+            toy = toy - frontamount
+        }else{
+            document.getElementById("fronterror").hidden = false;
+        }
         load()
     }
     function load(){
@@ -117,6 +149,11 @@
         document.getElementById("snacks").hidden = true; 
         document.getElementById("drinks").hidden = true; 
         document.getElementById("toys").hidden = true; 
+        document.getElementById("spacefront").hidden = true;
+        document.getElementById("frontplace").hidden = true;
+        document.getElementById("frontamount").hidden = true; 
+        document.getElementById("frontselector").hidden = true;  
+        document.getElementById("fronttalk").hidden = true;  
         load()
     }
     function frontarea(){
@@ -128,7 +165,12 @@
         document.getElementById("food").hidden = true;
         document.getElementById("snacks").hidden = true; 
         document.getElementById("drinks").hidden = true; 
-        document.getElementById("toys").hidden = true; 
+        document.getElementById("toys").hidden = true;
+        document.getElementById("spacefront").hidden = false;
+        document.getElementById("frontplace").hidden = false;
+        document.getElementById("frontamount").hidden = false; 
+        document.getElementById("frontselector").hidden = false; 
+        document.getElementById("fronttalk").hidden = false;  
         load()
     }
     function buyarea(){
@@ -140,7 +182,12 @@
         document.getElementById("food").hidden = false;
         document.getElementById("snacks").hidden = false; 
         document.getElementById("drinks").hidden = false; 
-        document.getElementById("toys").hidden = false; 
+        document.getElementById("toys").hidden = false;
+        document.getElementById("spacefront").hidden = true;
+        document.getElementById("frontplace").hidden = true;
+        document.getElementById("frontamount").hidden = true; 
+        document.getElementById("frontselector").hidden = true; 
+        document.getElementById("fronttalk").hidden = true;  
         load()
         
     }
