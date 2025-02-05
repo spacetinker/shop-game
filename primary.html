@@ -5,7 +5,7 @@
     you need to buy and sell goods to make a profit
 </p>
 <p id="introend" hidden>
-    first go to the buy menu and buy 10 bread then go to frontstore and place them on display
+    first go to the buy menu and buy 10 food then go to frontstore and place them on display
 </p>
 <button id="continueintro" onclick="continuestart()">
     continue
@@ -38,6 +38,7 @@
     <p id=snacks hidden> you have 0 snacks</p>
     <p id=drinks hidden> you have 0 drinks </p>
     <p id=toys hidden> you have 0 toys </p>
+    
 </html>
 <script>
     function load(){
@@ -77,6 +78,11 @@
         document.getElementById("buyselect").hidden = true; 
         document.getElementById("buyamount").hidden = true; 
         document.getElementById("buystart").hidden = true; 
+        document.getElementById("clothing").hidden = true;
+        document.getElementById("food").hidden = true;
+        document.getElementById("snacks").hidden = true; 
+        document.getElementById("drinks").hidden = true; 
+        document.getElementById("toys").hidden = true; 
         load()
     }
     function frontarea(){
@@ -84,6 +90,11 @@
         document.getElementById("buyselect").hidden = true; 
         document.getElementById("buyamount").hidden = true;
         document.getElementById("buystart").hidden = true; 
+        document.getElementById("clothing").hidden = true;
+        document.getElementById("food").hidden = true;
+        document.getElementById("snacks").hidden = true; 
+        document.getElementById("drinks").hidden = true; 
+        document.getElementById("toys").hidden = true; 
         load()
     }
     function buyarea(){
@@ -106,6 +117,7 @@
         document.getElementById("sell").hidden = false;
         document.getElementById("buy").hidden = false;
         document.getElementById("money").hidden = false; 
+        buyarea()
     }
 function continuestart(){
         document.getElementById("continueintroend").hidden = false;
