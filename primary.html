@@ -28,14 +28,22 @@
 <button>
     next turn
 </button>
-<p id="buyoption" hidden > you can buy clothing(1) food(2) snacks(3) drinks(4) or toys(5) </p>
+<p id="buyoption" hidden > you can buy clothing 15$(1) food 10$(2) snacks 7$(3) drinks 6$(4) or toys 8$(5) </p>
     <input type="number" id="buyselect" hidden > put the corrosponding number here</input>
     <input type="number" id="buyamount" hidden > how many? </input>
     <button id="buystart" onclick="buystuff()" hidden > Buy </button>
 </html>
 <script>
+    var clo = 0;
+    var foo = 0;
+    var sna = 0;
+    var dri = 0;
+    var toy = 0;
+    var money = 100;
     function buystuff(){
-        
+        if (buyselect == 1)
+            clo = clo + buyamount
+            money = money - (buyamount *  15) 
     }
     function statsarea(){
         document.getElementById("buyoption").hidden = true;
