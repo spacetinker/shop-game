@@ -69,8 +69,12 @@
     function nextturn(){
         repeat(math.random){
             var productpick = math.random(1, totaldemand)
-            if (productpick == 1){
+            if (productpick <= clothingdemand) and (frontclo >= 1){
                 frontclo = frontclo - 1
+                money = money + 18 
+            }
+            if (productpick <= fooddemand) and (productpick >= clothingdemand) and (frontfoo >= 1){
+                frontfoo = frontfoo - 1
                 money = money + 18 
             }
         }
