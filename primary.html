@@ -25,9 +25,6 @@
 <button id="buy" hidden>
     buy goods
 </button>
-<button>
-    next turn
-</button>
 <p id="buyoption" hidden > you can buy clothing 15$(1) food 10$(2) snacks 7$(3) drinks 6$(4) or toys 8$(5) </p>
     <input type="number" id="buyselect" hidden > put the corrosponding number here</input>
     <input type="number" id="buyamount" hidden > how many? </input>
@@ -54,7 +51,7 @@
 <p id="fronterror" hidden>
     sorry you either don't have enough of that product or there is not enough space
 </p>
-<button id="nextbutton" onclick=nextturn()>
+<button id="nextbutton" onclick=nextturn() hidden>
     next turn
 </button>
     
@@ -169,6 +166,7 @@
         document.getElementById("drinks").innerHTML = "you have " + dri + " drinks";
         document.getElementById("toys").innerHTML = "you have " + toy + " toys";
         document.getElementById("spacefront").innerHTML = "you still have " + frontspace + " space avaliable";
+        document.getElemtntById("nextbutton").hidden = true;
     }
     var clo = 0;
     var foo = 0;
