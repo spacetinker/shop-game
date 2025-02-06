@@ -87,7 +87,10 @@
             }
             if (productpick <= toydemand) and (productpick >= number(drinkdemand)+number(snackdemand)+number(fooddemand)+number(clothingdemand)) and (fronttoy >= 1){
                 fronttoy = fronttoy - 1
-                money = money + 10
+                money = number(money) + number(10)
+            }
+            if(clothingdemand > 1){
+                clothingdemand = number(clothingdemand) + number(math.random(-1, 1)
             }
         }
         
