@@ -75,7 +75,19 @@
             }
             if (productpick <= fooddemand) and (productpick >= clothingdemand) and (frontfoo >= 1){
                 frontfoo = frontfoo - 1
-                money = money + 18 
+                money = money + 12
+            }
+            if (productpick <= snackdemand) and (productpick >= fooddemand) and (frontsna >= 1){
+                frontsna = frontsna - 1
+                money = money + 10
+            }
+            if (productpick <= drinkdemand) and (productpick >= snackdemand) and (frontdri >= 1){
+                frontdri = frontdri - 1
+                money = money + 8
+            }
+            if (productpick <= drinkdemand) and (productpick >= snackdemand) and (frontdri >= 1){
+                frontdri = frontdri - 1
+                money = money + 8
             }
         }
         
