@@ -65,9 +65,14 @@
     var snackdemand = 1
     var drinkdemand = 1
     var toydemand = 1
+    var totaldemand = number(toydemand)+number(drinkdemand)+number(snackdemand)+nummber(fooddemand)+number(clothingdemand)
     function nextturn(){
         repeat(math.random){
-            var = math.random(1-5)
+            var productpick = math.random(1, totaldemand)
+            if (productpick == 1){
+                frontclo = frontclo - 1
+                money = money + 18 
+            }
         }
         
     }
