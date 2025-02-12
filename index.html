@@ -1,0 +1,55 @@
+<html>
+<body>
+<p id="intro">
+    you are a owner of a new shop on market street
+    you need to buy and sell goods to make a profit
+</p>
+<p id="introend" hidden>
+    first go to the buy menu and buy 10 food then go to frontstore and place them on display
+</p>
+<button id="continueintro" onclick="continuestart()">
+    continue
+</button>
+<button id="continueintroend" onclick="continuestartend()" hidden>
+    continue
+</button>
+<button id="sell" onclick="showStorefront()" hidden>
+    storefront
+</button>
+<p></p>
+<button id="stats" onclick="showStats()" hidden>
+    stats
+</button>
+<p></p>
+<button id="buy" onclick="showBuyMenu()" hidden>
+    buy goods
+</button>
+<p id="buyoption" hidden> you can buy clothing 15$(1) food 10$(2) snacks 7$(3) drinks 6$(4) or toys 8$(5) </p>
+<input type="number" id="buyselect" hidden placeholder="Enter item number">
+<input type="number" id="buyamount" hidden placeholder="Enter quantity">
+<button id="buystart" onclick="buystuff()" hidden> Buy </button>
+<p id="money" hidden> you have 100$ </p>
+<p id="clothing" hidden> you have 0 pieces of clothing </p>
+<p id="food" hidden> you have 0 pieces of food</p>
+<p id="snacks" hidden> you have 0 snacks</p>
+<p id="drinks" hidden> you have 0 drinks </p>
+<p id="toys" hidden> you have 0 toys </p>
+<p id="fronttalk" hidden>
+    which do you want to put in front?
+</p>
+<input type="number" id="frontselector" hidden placeholder="Enter item number">
+<input type="number" id="frontamount" hidden placeholder="Enter quantity">
+<button id="frontplace" onclick="placefront()" hidden>put it in front</button>
+<p id="spacefront" hidden>
+    you still have 200 space available
+</p>
+<p id="fronterror" hidden>
+    sorry you either don't have enough of that product or there is not enough space
+</p>
+<button id="nextbutton" onclick="nextturn()" hidden>
+    next turn
+</button>
+</body>
+<script src="main.js">
+</script>
+</html>
