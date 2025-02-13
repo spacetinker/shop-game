@@ -97,6 +97,15 @@ function showStats() {
     document.getElementById("snacks").hidden = false;
     document.getElementById("drinks").hidden = false;
     document.getElementById("toys").hidden = false;
+    document.getElementById("fronttalk").hidden = true;
+    document.getElementById("frontselector").hidden = true;
+    document.getElementById("frontamount").hidden = true;
+    document.getElementById("frontplace").hidden = true;
+    document.getElementById("spacefront").hidden = true;
+    document.getElementById("buyoption").hidden = true;
+    document.getElementById("buyselect").hidden = true;
+    document.getElementById("buyamount").hidden = true;
+    document.getElementById("buystart").hidden = true;
 }
 
 function showBuyMenu() {
@@ -104,6 +113,16 @@ function showBuyMenu() {
     document.getElementById("buyselect").hidden = false;
     document.getElementById("buyamount").hidden = false;
     document.getElementById("buystart").hidden = false;
+    document.getElementById("fronttalk").hidden = true;
+    document.getElementById("frontselector").hidden = true;
+    document.getElementById("frontamount").hidden = true;
+    document.getElementById("frontplace").hidden = true;
+    document.getElementById("spacefront").hidden = true;
+    document.getElementById("clothing").hidden = true;
+    document.getElementById("food").hidden = true;
+    document.getElementById("snacks").hidden = true;
+    document.getElementById("drinks").hidden = true;
+    document.getElementById("toys").hidden = true;
 }
 
 function showStorefront() {
@@ -112,4 +131,13 @@ function showStorefront() {
     document.getElementById("frontamount").hidden = false;
     document.getElementById("frontplace").hidden = false;
     document.getElementById("spacefront").hidden = false;
+    document.getElementById("clothing").hidden = true;
+    document.getElementById("food").hidden = true;
+    document.getElementById("snacks").hidden = true;
+    document.getElementById("drinks").hidden = true;
+    document.getElementById("toys").hidden = true;
+    document.getElementById("buyoption").hidden = true;
+    document.getElementById("buyselect").hidden = true;
+    document.getElementById("buyamount").hidden = true;
+    document.getElementById("buystart").hidden = true;
 }
