@@ -74,7 +74,9 @@ function placefront() {
     }
     load();
 }
-
+function tutorialclose() {
+    
+}
 function continuestartend() {
     document.getElementById("introend").hidden = true;
     document.getElementById("continueintroend").hidden = true;
@@ -82,6 +84,7 @@ function continuestartend() {
     document.getElementById("sell").hidden = false;
     document.getElementById("buy").hidden = false;
     document.getElementById("money").hidden = false;
+    document.getElementById("tutorialtext").hidden = false;
 }
 
 function continuestart() {
