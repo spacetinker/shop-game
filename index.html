@@ -13,18 +13,34 @@
 <button id="continueintroend" onclick="continuestartend()" hidden>
     continue
 </button>
+<button id="skiptutorial" onclick="tutorialclose()">
+    skip tutorial
+</button>
+<p id="tutorialtext" hidden>first press buy</p>
 <p><button id="sell" onclick="showStorefront()" hidden>
     storefront
 </button>
 <button id="stats" onclick="showStats()" hidden>
     stats
 </button>
+<button id="buyt" onclick="tutorialbuy()" hidden>
+    buy
+</button>
 <button id="buy" onclick="showBuyMenu()" hidden>
     buy goods
 </button></p>
+<p id="buytutorial1" hidden>
+   now enter 2 into here 
+</p>
 <p id="buyoption" hidden> you can buy clothing 15$(1) food 10$(2) snacks 7$(3) drinks 6$(4) or toys 8$(5) </p>
 <input type="number" id="buyselect" hidden placeholder="Enter item number">
+<p id="buytutorial2" hidden>
+    and 10 into here
+</p>
 <input type="number" id="buyamount" hidden placeholder="Enter quantity">
+<p id="buytutorial3" hidden>
+    now press here
+</p>
 <button id="buystart" onclick="buystuff()" hidden> Buy </button>
 <p id="money" hidden> you have 100$ </p>
 <p id="clothing" hidden> you have 0 pieces of clothing </p>
