@@ -80,13 +80,34 @@ function tutorialbuy() {
     document.getElementById("buytutorial3").hidden = false;
 }
 function buystufft() {
-    if(food == 10)
+    let buyAmount = parseInt(document.getElementById("buyamount").value);
+    let buySelect = parseInt(document.getElementById("buyselect").value);
+    if(buyselect == 2 && buyamount == 10)
     document.getElementById("buytutorial1").hidden = true;
     document.getElementById("buytutorial2").hidden = true;
     document.getElementById("buytutorial3").hidden = true;
     document.getElementById("buystartt").hidden = true;
     document.getElementById("buystart").hidden = false;
     document.getElementById("selltutorial1").hidden = false;
+    document.GetElementById("buytutbotpro").hidden = true;
+    document.GetElementById("buytutprosel").hidden = true;
+    document.GetElementById("buytutproamo").hidden = true;
+}else{
+    if(buyselect != 2){
+        document.GetElementById("buytutbotpro").hidden = true;
+        document.GetElementById("buytutprosel").hidden = false;
+        document.GetElementById("buytutproamo").hidden = true;
+    }
+    if(buyamount != 10){
+        document.GetElementById("buytutbotpro").hidden = true;
+        document.GetElementById("buytutprosel").hidden = true;
+        document.GetElementById("buytutproamo").hidden = false;
+    }
+    if(buyselect != 2 && buyamount != 10){
+        document.GetElementById("buytutbotpro").hidden = false;
+        document.GetElementById("buytutprosel").hidden = true;
+        document.GetElementById("buytutproamo").hidden = true;
+    }
 }
 function tutorialclose() {
     document.getElementById("introend").hidden = true;
