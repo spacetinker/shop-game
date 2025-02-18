@@ -86,6 +86,7 @@ function buystufft() {
     document.getElementById("buytutorial3").hidden = true;
     document.getElementById("buystartt").hidden = true;
     document.getElementById("buystart").hidden = false;
+    document.getElementById("selltutorial1").hidden = false;
 }
 function tutorialclose() {
     document.getElementById("introend").hidden = true;
