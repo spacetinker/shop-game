@@ -74,15 +74,33 @@ function placefront() {
     }
     load();
 }
+function tutorialbuy() {
+    document.getElementById("buytutorial1").hidden = false;
+    document.getElementById("buytutorial2").hidden = false;
+    document.getElementById("buytutorial3").hidden = false;
+}
+function buystufft() {
+    if(food == 10)
+    document.getElementById("buytutorial1").hidden = true;
+    document.getElementById("buytutorial2").hidden = true;
+    document.getElementById("buytutorial3").hidden = true;
+    document.getElementById("buystartt").hidden = true;
+    document.getElementById("buystart").hidden = false;
+}
 function tutorialclose() {
-    
+    document.getElementById("introend").hidden = true;
+    document.getElementById("continueintroend").hidden = true;
+    document.getElementById("stats").hidden = false;
+    document.getElementById("sell").hidden = false;
+    document.getElementById("buy").hidden = false;
+    document.getElementById("money").hidden = false;
 }
 function continuestartend() {
     document.getElementById("introend").hidden = true;
     document.getElementById("continueintroend").hidden = true;
     document.getElementById("stats").hidden = false;
     document.getElementById("sell").hidden = false;
-    document.getElementById("buy").hidden = false;
+    document.getElementById("buyt").hidden = false;
     document.getElementById("money").hidden = false;
     document.getElementById("tutorialtext").hidden = false;
 }
