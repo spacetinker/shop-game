@@ -92,6 +92,8 @@ function buystufft() {
     document.GetElementById("buytutbotpro").hidden = true;
     document.GetElementById("buytutprosel").hidden = true;
     document.GetElementById("buytutproamo").hidden = true;
+    food = number(food) + number(10)
+    money = money - 100
 }else{
     if(buyselect != 2){
         document.GetElementById("buytutbotpro").hidden = true;
@@ -109,19 +111,74 @@ function buystufft() {
         document.GetElementById("buytutproamo").hidden = true;
     }
 }
+function showstorefrontt() {
+    document.getElementById("selltutorial1").hidden = true;
+    document.getElementById("selltutorial2").hidden = false;
+    document.getElementById("selltutorial3").hidden = false;
+    document.getElementById("buyoption").hidden = true;
+    document.getElementById("buyselect").hidden = true;
+    document.getElementById("buyamount").hidden = true;
+    document.getElementById("buystart").hidden = true;
+    document.getElementById("fronttalk").hidden = false;
+    document.getElementById("frontselectort").hidden = false;
+    document.getElementById("frontamountt").hidden = false;
+    document.getElementById("frontplace").hidden = false;
+    document.getElementById("spacefront").hidden = false;
+}
+function placefrontt() {
+    let frontAmount = parseInt(document.getElementById("frontamount").value);
+    let frontSelect = parseInt(document.getElementById("frontselector").value);
+    if (frontSelect == 2 && frontAmount == 10){
+        frontfoo = number(frontfoo) + number(10)
+        foo = foo - 10
+        document.getElementById("selltutorial2").hidden = true;
+        document.getElementById("selltutorial3").hidden = true;
+        document.getElementById("finaltutorial").hidden = false;
+        document.getElementById("sell").hidden = false;
+        document.getElementById("sellt").hidden = true;
+    }else{
+        if(frontSelect != 2){
+        document.GetElementById("seltutbotpro").hidden = true;
+        document.GetElementById("seltutprosel").hidden = false;
+        document.GetElementById("seltutproamo").hidden = true;
+    }
+    if(buyamount != 10){
+        document.GetElementById("seltutbotpro").hidden = true;
+        document.GetElementById("seltutprosel").hidden = true;
+        document.GetElementById("seltutproamo").hidden = false;
+    }
+    if(buyselect != 2 && buyamount != 10){
+        document.GetElementById("seltutbotpro").hidden = false;
+        document.GetElementById("seltutprosel").hidden = true;
+        document.GetElementById("seltutproamo").hidden = true;
+    }
+    }
+    load();
+}
 function tutorialclose() {
     document.getElementById("introend").hidden = true;
     document.getElementById("continueintroend").hidden = true;
     document.getElementById("stats").hidden = false;
     document.getElementById("sell").hidden = false;
     document.getElementById("buy").hidden = false;
+    document.getElementById("sellt").hidden = true;
+    document.getElementById("buyt").hidden = true;
     document.getElementById("money").hidden = false;
+    document.getElementById("buytutorial1").hidden = true;
+    document.getElementById("buytutorial2").hidden = true;
+    document.getElementById("buytutorial3").hidden = true;
+    document.getElementById("buystartt").hidden = true;
+    document.getElementById("buystart").hidden = false;
+    document.getElementById("selltutorial1").hidden = true;
+    document.GetElementById("buytutbotpro").hidden = true;
+    document.GetElementById("buytutprosel").hidden = true;
+    document.GetElementById("buytutproamo").hidden = true;
 }
 function continuestartend() {
     document.getElementById("introend").hidden = true;
     document.getElementById("continueintroend").hidden = true;
     document.getElementById("stats").hidden = false;
-    document.getElementById("sell").hidden = false;
+    document.getElementById("sellt").hidden = false;
     document.getElementById("buyt").hidden = false;
     document.getElementById("money").hidden = false;
     document.getElementById("tutorialtext").hidden = false;
