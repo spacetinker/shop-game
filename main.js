@@ -78,9 +78,7 @@ function placefront() {
 function continuestartend() {
     document.getElementById("introend").hidden = true;
     document.getElementById("continueintroend").hidden = true;
-    document.getElementById("stats").hidden = false;
-    document.getElementById("sell").hidden = false;
-    document.getElementById("buy").hidden = false;
+    document.getElementById("primarybuttons").hidden = false;
     document.getElementById("money").hidden = false;
 }
 
