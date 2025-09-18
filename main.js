@@ -80,6 +80,7 @@ function continuestartend() {
     document.getElementById("continueintroend").hidden = true;
     document.getElementById("primarybuttons").hidden = false;
     document.getElementById("money").hidden = false;
+    document.getElementById("nextbutton").hidden = false;
 }
 
 function continuestart() {
