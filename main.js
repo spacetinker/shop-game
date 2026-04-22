@@ -4,6 +4,7 @@ var snackdemand = 1;
 var drinkdemand = 1;
 var toydemand = 1;
 var totaldemand = toydemand + drinkdemand + snackdemand + fooddemand + clothingdemand;
+var posStart = 1;
 
 function nextturn() {
     for (let i = 0; i < Math.floor(Math.random() * 24) + 2; i++) {
@@ -84,10 +85,16 @@ function continuestartend() {
 }
 
 function continuestart() {
-    document.getElementById("continueintroend").hidden = false;
-    document.getElementById("introend").hidden = false;
-    document.getElementById("continueintro").hidden = true;
-    document.getElementById("intro").hidden = true;
+    if(posStart==1){
+        posStart = 0;
+        document.getElementById("intro").innerHTML = "first go to the buy menu and buy 10 food then go to frontstore and place them on display";
+    }else{
+        document.getElementById("intro").hidden = true;
+        document.getElementById("continueintro").hidden = true;
+        document.getElementById("primarybuttons").hidden = false;
+        document.getElementById("money").hidden = false;
+        document.getElementById("nextbutton").hidden = false;
+    }
 }
 function showStats() {
     document.getElementById("money").hidden = false;
