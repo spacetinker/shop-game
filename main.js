@@ -76,14 +76,6 @@ function placefront() {
     load();
 }
 
-function continuestartend() {
-    document.getElementById("introend").hidden = true;
-    document.getElementById("continueintroend").hidden = true;
-    document.getElementById("primarybuttons").hidden = false;
-    document.getElementById("money").hidden = false;
-    document.getElementById("nextbutton").hidden = false;
-}
-
 function continuestart() {
     if(posStart==1){
         posStart = 0;
